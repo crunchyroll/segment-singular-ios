@@ -56,7 +56,7 @@ static bool isInitialized = NO;
     return self;
 }
 
-- (void)track:(SEGTrackPayload *)payload{
+- (void)track:(SEGTrackPayload *)payload {
     
     if([[payload properties] objectForKey:SEGMENT_REVENUE_KEY] ||
        [[[payload properties] objectForKey:SEGMENT_REVENUE_KEY] doubleValue] != 0) {
@@ -74,13 +74,13 @@ static bool isInitialized = NO;
     }
 }
 
--(void)identify:(SEGIdentifyPayload *)payload{
+- (void)identify:(SEGIdentifyPayload *)payload {
     if([payload userId] && [[payload userId] length] > 0){
         [Singular setCustomUserId:[payload userId]];
     }
 }
 
-- (void)reset{
+- (void)reset {
     [Singular unsetCustomUserId];
 }
 
