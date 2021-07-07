@@ -7,7 +7,7 @@
 //
 
 #import "SingularIntegrationFactory.h"
-#import "SingularIntegation.h"
+#import "SingularIntegration.h"
 
 @implementation SingularIntegrationFactory
 
@@ -33,7 +33,7 @@
     return @"Singular";
 }
 
-+(void)setSKANOptions:(BOOL)skAdNetworkEnabled isManualSkanConversionManagementMode:(BOOL)manualMode withWaitForTrackingAuthorizationWithTimeoutInterval:(NSNumber* _Nullable)waitTrackingAuthorizationWithTimeoutInterval withConversionValueUpdatedHandler:(void(^_Nullable)(NSInteger))conversionValueUpdatedHandler {
++ (void)setSKANOptions:(BOOL)skAdNetworkEnabled isManualSkanConversionManagementMode:(BOOL)manualMode withWaitForTrackingAuthorizationWithTimeoutInterval:(NSNumber* _Nullable)waitTrackingAuthorizationWithTimeoutInterval withConversionValueUpdatedHandler:(void(^_Nullable)(NSInteger))conversionValueUpdatedHandler {
     [SingularIntegation setSKANOptions:skAdNetworkEnabled isManualSkanConversionManagementMode:manualMode withWaitForTrackingAuthorizationWithTimeoutInterval:waitTrackingAuthorizationWithTimeoutInterval withConversionValueUpdatedHandler:conversionValueUpdatedHandler];
 }
 
